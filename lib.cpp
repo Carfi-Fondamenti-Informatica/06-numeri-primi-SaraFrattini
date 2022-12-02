@@ -1,8 +1,23 @@
-#include "libreria1.h"
 #include <iostream>
+#include "lib.h"
 using namespace std;
-bool SCIAOBELLO (int i, int x){
-    cout <<i<< endl;
-    cout <<x/i<< endl;
-    return x/i==0 ? x==i : SCIAOBELLO (i+1,x);
+
+bool SCIAOBELLO (int n) {
+    int i=1, x;
+    bool risultato;
+    if (n>1){
+        do {
+            i++;
+            x=n%i;
+        }
+        while (x!=0);
+        if ( n==i ) {
+            risultato = 0;
+            return risultato;
+        }
+        else {
+            risultato =1;
+            return risultato;
+        }
+    }
 }
